@@ -1,13 +1,50 @@
 import Head from 'next/head';
-import Image from 'next/image';
-import styles from '../styles/Home.module.css';
 import 'tailwindcss/tailwind.css';
 
 import Navbar from '../components/Navbar.js';
+import Button from '../components/Button';
+import Footer from '../components/Footer';
+import HomeSection from '../components/HomeSection';
 
 export default function Home() {
+    const DATABASE_ITEM = [
+        {
+            title: 'Tabung Oksigen',
+            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
+            img: '/assets/database/oxygen.png'
+        },
+        {
+            title: 'Vaksinasi',
+            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
+            img: '/assets/database/vaccine.png'
+        },
+        {
+            title: 'Tes Swab',
+            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
+            img: '/assets/database/swab.png'
+        }
+    ];
+
+    const INFORMATION_ITEM = [
+        {
+            title: 'Indeks Kewaspadaan',
+            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
+            img: '/assets/information/map.png'
+        },
+        {
+            title: 'Edukasi COVID-19',
+            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
+            img: '/assets/information/covid.png'
+        },
+        {
+            title: 'Tanya Jawab',
+            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
+            img: '/assets/information/info.png'
+        }
+    ];
+
     return (
-        <div className={styles.container}>
+        <div className="flex-flex-col">
             <Navbar />
             <Head>
                 <title>Indonesia Bebas Pandemi</title>
@@ -30,64 +67,37 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <main className={styles.main}>
-                <h1 className={styles.title}>Title</h1>
-
-                <div className={styles.grid}>
-                    <a href="https://nextjs.org/docs" className={styles.card}>
-                        <h2>Documentation &rarr;</h2>
-                        <p>
-                            Find in-depth information about Next.js features and
-                            API.
-                        </p>
-                    </a>
-
-                    <a href="https://nextjs.org/learn" className={styles.card}>
-                        <h2>Learn &rarr;</h2>
-                        <p>
-                            Learn about Next.js in an interactive course with
-                            quizzes!
-                        </p>
-                    </a>
-
-                    <a
-                        href="https://github.com/vercel/next.js/tree/master/examples"
-                        className={styles.card}>
-                        <h2>Examples &rarr;</h2>
-                        <p>
-                            Discover and deploy boilerplate example Next.js
-                            projects.
-                        </p>
-                    </a>
-
-                    <a
-                        href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-                        className={styles.card}>
-                        <h2>Deploy &rarr;</h2>
-                        <p>
-                            Instantly deploy your Next.js site to a public URL
-                            with Vercel.
-                        </p>
-                    </a>
+            <div className="flex flex-col items-center mb-12">
+                <div
+                    className="flex flex-col items-center justify-center h-screen pb-24 px-8"
+                    style={{ height: '56em' }}>
+                    <div className="font-bold text-5xl mb-8 px-4 text-center">
+                        Indonesia Bebas Pandemi
+                    </div>
+                    <p className="max-w-xl text-lg text-center">
+                        Situs berbasis{' '}
+                        <span className="italic font-semibold">
+                            crowdsourcing
+                        </span>{' '}
+                        berisikan informasi dan basis data untuk membantu
+                        masyarakat Indonesia menanggulangi pandemi COVID-19
+                        (Coronavirus).
+                    </p>
+                    <div className="flex flex-row w-72 mt-4">
+                        <Button className="mr-4">Basis Data</Button>
+                        <Button>Informasi</Button>
+                    </div>
                 </div>
-            </main>
 
-            <footer className={styles.footer}>
-                <a
-                    href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    Powered by{' '}
-                    <span className={styles.logo}>
-                        <Image
-                            src="/vercel.svg"
-                            alt="Vercel Logo"
-                            width={72}
-                            height={16}
-                        />
-                    </span>
-                </a>
-            </footer>
+                <HomeSection
+                    title="Basis Data"
+                    className="mb-16"
+                    items={DATABASE_ITEM}
+                />
+                <HomeSection title="Informasi" items={INFORMATION_ITEM} />
+            </div>
+
+            <Footer></Footer>
         </div>
     );
 }

@@ -29,7 +29,7 @@ export default function Navbar(props) {
                             Bebas Pandemi
                         </li>
                     </ul>
-                    <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
+                    <ul className="flex flex-row list-none lg:ml-auto">
                         {MENU_LINKS.map((item) => {
                             return (
                                 <a
