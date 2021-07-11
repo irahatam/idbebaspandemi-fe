@@ -20,8 +20,8 @@ export default function HomeSection({
                         return (
                             <div
                                 className={
-                                    'w-1/3 ' +
-                                    (index === items.length - 1 ? null : 'mr-4')
+                                    'w-1/2 ' +
+                                    (index === items.length - 1 ? null : 'mr-6')
                                 }>
                                 <img
                                     src={item.img}

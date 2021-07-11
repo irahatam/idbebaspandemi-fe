@@ -10,17 +10,17 @@ export default function Home() {
     const DATABASE_ITEM = [
         {
             title: 'Tabung Oksigen',
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
+            desc: 'Basis data pembelian, penyewaan, dan pengisian ulang tabung oksigen.',
             img: '/assets/database/oxygen.png'
         },
-        {
-            title: 'Vaksinasi',
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
-            img: '/assets/database/vaccine.png'
-        },
+        // {
+        //     title: 'Vaksinasi',
+        //     desc: 'Coming Soon. ',
+        //     img: '/assets/database/vaccine.png'
+        // },
         {
             title: 'Tes Swab',
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
+            desc: 'Basis data lokasi pelaksanaan tes usap (swab) antigen dan PCR. ',
             img: '/assets/database/swab.png'
         }
     ];
@@ -28,19 +28,19 @@ export default function Home() {
     const INFORMATION_ITEM = [
         {
             title: 'Indeks Kewaspadaan',
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
+            desc: 'Informasi risiko COVID-19 di wilayah tertentu (via kawalcovid19.id). ',
             img: '/assets/information/map.png'
         },
         {
             title: 'Edukasi COVID-19',
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
+            desc: 'Informasi tentang COVID-19. ',
             img: '/assets/information/covid.png'
-        },
-        {
-            title: 'Tanya Jawab',
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
-            img: '/assets/information/info.png'
         }
+        // {
+        //     title: 'Tanya Jawab',
+        //     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
+        //     img: '/assets/information/info.png'
+        // }
     ];
 
     return (
