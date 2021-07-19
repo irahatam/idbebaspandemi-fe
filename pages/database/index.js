@@ -218,7 +218,7 @@ export default function Database() {
                 </div>
             </div>
 
-            <div className="flex flex-col w-full items-center ">
+            <div className="flex flex-col w-full items-center px-3 sm:px-0">
                 <div className="flex max-w-5xl w-full">
                     <div className="flex  w-full border-gray-500 border items-center rounded-lg">
                         <div className="mx-4">🔍</div>
